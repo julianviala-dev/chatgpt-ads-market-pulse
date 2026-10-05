@@ -1,0 +1,20 @@
+name: Weekly Pulse Gate
+on:
+  schedule:
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -e '.[dev]'
+      - run: pytest -q
+      - run: bash scripts/pulse validate
+      - name: Explain acquisition boundary
+        run: |
+          echo "Core is ready. Real weekly discovery must be supplied by an approved EvidenceAdapter."
+          echo "See docs/ADAPTERS.md and prompts/DISCOVERY.md."
