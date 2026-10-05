@@ -1,0 +1,9 @@
+policy: "Official OpenAI sources only. Refresh at run time. Never feed product capability into sentiment scoring."
+sources:
+  - https://ads.openai.com/
+  - https://openai.com/index/new-ways-to-buy-chatgpt-ads/
+  - https://openai.com/index/new-chatgpt-ads-format-and-measurement/
+  - https://help.openai.com/en/articles/20001409-conversion-measurement
+  - https://help.openai.com/en/articles/20001412-conversion-optimized-campaigns
+  - https://help.openai.com/en/articles/20001413-daily-budgets
+  - https://help.openai.com/en/collections/20001228-campaign-setup
