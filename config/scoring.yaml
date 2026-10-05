@@ -1,0 +1,23 @@
+sentiment:
+  min: -2
+  max: 2
+  neutral_temperature: 5.0
+  scale_to_temperature: 2.5
+tier_weight:
+  1: 1.0
+  2: 0.65
+  3: 0.25
+independence_weight:
+  verified: 1.0
+  probable: 0.75
+  unknown: 0.50
+business_impact_weight:
+  high: 1.0
+  medium: 0.70
+  low: 0.40
+recency_weight:
+  0_7_days: 1.0
+  8_14_days: 0.85
+  15_28_days: 0.65
+  older: 0.40
+tier3_effective_weight_cap: 0.20
