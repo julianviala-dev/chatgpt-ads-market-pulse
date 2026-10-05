@@ -1,0 +1,5 @@
+[
+  {"experience_id":"E1","claim_id":"E1.a","source_url":"https://example.com/positive","source_family":"agency-a","tier":2,"sentiment":1,"independence":"probable","business_impact":"high","age_days":3,"summary":"Illustrative positive traffic-economics signal.","product_intelligence":false},
+  {"experience_id":"E2","claim_id":"E2.a","source_url":"https://example.com/negative","source_family":"advertiser-b","tier":2,"sentiment":-2,"independence":"verified","business_impact":"high","age_days":2,"summary":"Illustrative downstream-conversion concern.","product_intelligence":false},
+  {"experience_id":"E3","claim_id":"E3.a","source_url":"https://example.com/watch","source_family":"vendor-c","tier":3,"sentiment":-1,"independence":"unknown","business_impact":"medium","age_days":4,"summary":"Illustrative exploratory watchlist signal.","product_intelligence":false}
+]
