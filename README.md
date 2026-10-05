@@ -39,16 +39,16 @@ Engagement cannot rescue bad evidence. Duplicate coverage of one test is one exp
 Python 3.11+:
 
 ```bash
-./scripts/setup
-./scripts/pulse validate
-./scripts/pulse demo
+bash scripts/setup
+bash scripts/pulse validate
+bash scripts/pulse demo
 ```
 
 Run with your own evidence ledger:
 
 ```bash
 cp .env.example .env
-./scripts/pulse run --input path/to/evidence.json
+bash scripts/pulse run --input path/to/evidence.json
 ```
 
 ## Deploy with Codex / ChatGPT
@@ -56,6 +56,14 @@ cp .env.example .env
 Open this repo and ask:
 
 > Set up ChatGPT Ads Market Pulse for me. Follow AGENTS.md. Preserve Julian Viala's methodology and locked V13 presentation. Configure my recipient, timezone, scan window and approved source adapters. Validate the environment, run a test Pulse, show me the output, and do not enable distribution until I approve it.
+
+### One-prompt bootstrap
+
+Give Codex/ChatGPT the repository URL and say:
+
+> Deploy this Market Pulse for me. Read AGENTS.md first. Use my approved web/search capabilities for discovery, preserve the evidence methodology and V13 renderer, configure my timezone and recipient, run a preview, and ask before enabling distribution.
+
+The agent should use `prompts/DISCOVERY.md`, `prompts/PRODUCT_INTELLIGENCE.md` and `prompts/BATTLECARDS.md`. Real acquisition remains adapter-driven rather than hidden scraping.
 
 **Agent entry points:** [AGENTS.md](AGENTS.md) · [SKILL.md](SKILL.md) · [Methodology](docs/METHODOLOGY.md) · [Deployment](docs/DEPLOYMENT.md)
 
@@ -67,6 +75,15 @@ Open this repo and ask:
 - `config/product_sources.yaml`: official OpenAI product-source allowlist
 - `schemas/evidence.schema.json`: machine-readable evidence contract
 - `templates/v13/email.html`: locked executive renderer
+
+## Deployment status
+
+**Core pipeline:** reusable and deterministic.  
+**Weekly GitHub readiness gate:** included.  
+**Real discovery:** supplied through an approved EvidenceAdapter or an interactive Codex/ChatGPT session with approved search/browser access.  
+**Email delivery:** deliberately requires operator-specific mail integration and approval.
+
+See [acceptance criteria](docs/ACCEPTANCE.md) and [adapter contract](docs/ADAPTERS.md).
 
 ## Automation boundary
 
