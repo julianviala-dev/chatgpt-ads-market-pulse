@@ -34,3 +34,4 @@ def main():
     elif a.cmd=='demo': run(ROOT/'examples/evidence/demo.json',ROOT/a.output)
     else: run(a.input,a.output)
 if __name__=='__main__': main()
+
