@@ -10,7 +10,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -e '.[dev]'
-      - run: ./scripts/pulse demo
+      - run: bash scripts/pulse demo
       - uses: actions/upload-artifact@v4
         with:
           name: market-pulse-html
