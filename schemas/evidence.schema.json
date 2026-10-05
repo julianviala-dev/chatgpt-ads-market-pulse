@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Market Pulse evidence",
+  "type":"array",
+  "items":{
+    "type":"object",
+    "required":["experience_id","claim_id","source_url","source_family","tier","sentiment","independence","business_impact","age_days","product_intelligence"],
+    "properties":{
+      "experience_id":{"type":"string"},
+      "claim_id":{"type":"string"},
+      "source_url":{"type":"string","format":"uri"},
+      "source_family":{"type":"string"},
+      "tier":{"type":"integer","enum":[1,2,3]},
+      "sentiment":{"type":"integer","minimum":-2,"maximum":2},
+      "independence":{"enum":["verified","probable","unknown"]},
+      "business_impact":{"enum":["high","medium","low"]},
+      "age_days":{"type":"integer","minimum":0},
+      "summary":{"type":"string"},
+      "product_intelligence":{"type":"boolean","const":false}
+    }
+  }
+}
