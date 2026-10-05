@@ -1,0 +1,20 @@
+version: "1.0.0-poc"
+author:
+  name: "Julian Viala"
+  title: "CSM Ads"
+  linkedin: "https://www.linkedin.com/in/julian-viala/"
+  locked: true
+operator:
+  name: "{{ local_user }}"
+  recipient: "{{ PULSE_RECIPIENT }}"
+  timezone: "{{ PULSE_TIMEZONE }}"
+scan:
+  cadence: weekly
+  lookback_days: 7
+  rolling_stock_days: 28
+presentation:
+  template_version: v13
+  locked: true
+distribution:
+  enabled: false
+  require_human_approval: true
