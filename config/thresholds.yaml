@@ -1,0 +1,10 @@
+prevalence:
+  isolated: [1, 1]
+  emerging: [2, 3]
+  recurring: [4, 7]
+  broad_min: 8
+confidence:
+  low_max_qualified_experiences: 3
+  medium_min_qualified_experiences: 4
+  high_min_qualified_experiences: 8
+  high_min_source_families: 3
