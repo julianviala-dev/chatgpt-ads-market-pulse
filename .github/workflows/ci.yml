@@ -12,4 +12,4 @@ jobs:
           python-version: '3.11'
       - run: pip install -e '.[dev]'
       - run: pytest -q
-      - run: ./scripts/pulse validate
+      - run: bash scripts/pulse validate
