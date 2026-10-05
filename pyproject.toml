@@ -1,0 +1,12 @@
+[project]
+name = "chatgpt-ads-market-pulse"
+version = "1.0.0"
+description = "Evidence-qualified Voice of Advertiser intelligence for ChatGPT Ads"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6.0", "jsonschema>=4.22"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
